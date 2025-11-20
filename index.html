@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muskan Naresh Jain | Data Science & Generative AI Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #1f2937;
+            scroll-behavior: smooth;
+        }
+        .section-heading {
+            color: #0b1a32;
+            text-shadow: 1px 1px 0 #e5e7eb;
+        }
+        .skill-chip {
+            background-color: #e0f2f1; /* Teal 100 */
+            color: #0d9488; /* Teal 600 */
+            font-weight: 500;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+        }
+        .project-card {
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e5e7eb;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            border-color: #0d9488; /* Teal 600 */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-[#0b1a32]">Muskan Jain</a>
+            <nav class="hidden md:flex space-x-8 text-gray-600">
+                <a href="#hero" class="hover:text-[#0d9488] transition duration-150">About</a>
+                <a href="#skills" class="hover:text-[#0d9488] transition duration-150">Skills</a>
+                <a href="#experience" class="hover:text-[#0d9488] transition duration-150">Experience</a>
+                <a href="#projects" class="hover:text-[#0d9488] transition duration-150">Projects</a>
+                <a href="#contact" class="hover:text-[#0d9488] transition duration-150">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <!-- Mobile Menu Button (Placeholder for JS toggle) -->
+                <button id="mobile-menu-button" aria-label="Toggle Menu">
+                    <i data-lucide="menu" class="w-6 h-6 text-gray-700"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <nav class="px-4 pt-2 pb-4 space-y-1 sm:px-3 text-gray-700">
+                <a href="#hero" class="block py-2 px-3 rounded-md hover:bg-gray-100">About</a>
+                <a href="#skills" class="block py-2 px-3 rounded-md hover:bg-gray-100">Skills</a>
+                <a href="#experience" class="block py-2 px-3 rounded-md hover:bg-gray-100">Experience</a>
+                <a href="#projects" class="block py-2 px-3 rounded-md hover:bg-gray-100">Projects</a>
+                <a href="#contact" class="block py-2 px-3 rounded-md hover:bg-gray-100">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto">
+        
+        <!-- Hero Section -->
+        <section id="hero" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-white rounded-b-xl shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-8">
+                    <p class="text-base font-semibold text-[#0d9488] uppercase tracking-wider">Generative AI | MLOps | Data Science</p>
+                    <h1 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#0b1a32] leading-tight">
+                        Muskan Naresh Jain
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-600 max-w-2xl">
+                        Master's candidate in Data Analytics Engineering at Northeastern University, specializing in building and deploying transformer-based diagnostic models, agentic LLM pipelines (RAG, LangGraph, CrewAI), and enterprise-grade MLOps solutions, particularly in the Precision Medicine space.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="https://github.com/Muskanmelon-dotcom" target="_blank" class="flex items-center space-x-2 bg-[#0b1a32] text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition duration-300">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <!-- LinkedIn Button Added for high visibility -->
+                        <a href="https://www.linkedin.com/in/muskan-jain-25354a1b2/" target="_blank" class="flex items-center space-x-2 bg-[#0077b5] text-white px-6 py-3 rounded-lg font-medium hover:bg-[#005582] transition duration-300">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#projects" class="flex items-center space-x-2 bg-white text-[#0b1a32] border-2 border-[#0b1a32] px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition duration-300">
+                            <i data-lucide="layers" class="w-5 h-5"></i>
+                            <span>View Projects</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-4 flex justify-center">
+                    <!-- Profile Photo Placeholder: Replaced corrupted Base64 with a reliable placeholder URL -->
+                    <div class="w-56 h-56 rounded-full overflow-hidden border-4 border-[#0d9488] shadow-2xl">
+                        <img 
+                            src="https://placehold.co/224x224/0d9488/ffffff/png?text=Profile%20Image"
+                            alt="Muskan Jain professional headshot placeholder" 
+                            class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="section-heading text-3xl font-bold mb-8">Technical Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Generative AI & LLMs -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-teal-500">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="bot" class="w-6 h-6 text-teal-600"></i>
+                        <h3 class="text-xl font-semibold text-[#0b1a32]">Generative AI & LLMs</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip">LLM Fine-Tuning</span>
+                        <span class="skill-chip">RAG</span>
+                        <span class="skill-chip">LangChain/LangGraph</span>
+                        <span class="skill-chip">CrewAI</span>
+                        <span class="skill-chip">Agentic AI</span>
+                        <span class="skill-chip">Vector DBs (FAISS, Pinecone)</span>
+                        <span class="skill-chip">BERT/Transformers</span>
+                        <span class="skill-chip">Prompt Engineering</span>
+                    </div>
+                </div>
+
+                <!-- Machine Learning & MLOps -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-cyan-500">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="rocket" class="w-6 h-6 text-cyan-600"></i>
+                        <h3 class="text-xl font-semibold text-[#0b1a32]">ML/Deep Learning & MLOps</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip" style="background-color: #e0f7fa; color: #00bcd4;">PyTorch/TensorFlow</span>
+                        <span class="skill-chip" style="background-color: #e0f7fa; color: #00bcd4;">Vision/Swin Transformer</span>
+                        <span class="skill-chip" style="background-color: #e0f7fa; color: #00bcd4;">CNNs/LSTMs</span>
+                        <span class="skill-chip" style="background-color: #e0f7fa; color: #00bcd4;">Docker/Kubernetes</span>
+                        <span class="skill-chip" style="background-color: #e0f7fa; color: #00bcd4;">Airflow/CI/CD</span>
+                        <span class="skill-chip" style="background-color: #e0f7fa; color: #00bcd4;">AWS/GCP/Azure</span>
+                        <span class="skill-chip" style="background-color: #e0f7fa; color: #00bcd4;">Flask/FastAPI</span>
+                    </div>
+                </div>
+                
+                <!-- Data Engineering & Analytics -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-blue-500">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <i data-lucide="database" class="w-6 h-6 text-blue-600"></i>
+                        <h3 class="text-xl font-semibold text-[#0b1a32]">Data Engineering & Analytics</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip" style="background-color: #e3f2fd; color: #2196f3;">Python, R, SQL</span>
+                        <span class="skill-chip" style="background-color: #e3f2fd; color: #2196f3;">Snowflake/PySpark</span>
+                        <span class="skill-chip" style="background-color: #e3f2fd; color: #2196f3;">Tableau/Power BI</span>
+                        <span class="skill-chip" style="background-color: #e3f2fd; color: #2196f3;">Hypothesis Testing</span>
+                        <span class="skill-chip" style="background-color: #e3f2fd; color: #2196f3;">HL7/FHIR/ICD-10</span>
+                        <span class="skill-chip" style="background-color: #e3f2fd; color: #2196f3;">ETL/AWS Glue</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 px-4 sm:px-6 lg:px-8 bg-white rounded-xl shadow-xl">
+            <h2 class="section-heading text-3xl font-bold mb-10">Professional Experience</h2>
+            
+            <!-- Research Assistant - Deep Learning (Amal Lab) -->
+            <div class="relative pl-8 md:pl-16 pb-12">
+                <div class="absolute w-2 h-full bg-teal-200 left-3 md:left-6"></div>
+                <div class="absolute w-6 h-6 bg-teal-600 rounded-full left-0 md:left-3 top-0 flex items-center justify-center text-white">
+                    <i data-lucide="microscope" class="w-4 h-4"></i>
+                </div>
+                <div class="pl-4">
+                    <h3 class="text-2xl font-semibold text-[#0b1a32]">Research Assistant (Deep Learning)</h3>
+                    <p class="text-lg font-medium text-gray-700">Amal Lab for Precision Medicine, Northeastern University</p>
+                    <p class="text-sm text-gray-500 mt-1 mb-4">Sep 2023 – Current | Boston, MA</p>
+                    <ul class="list-disc space-y-3 pl-5 text-gray-600">
+                        <li><strong>LLM/Agentic Pipelines:</strong> Built an agentic LLM pipeline for pathology report structuring using RAG and rule-based validation, resulting in <strong>80% cut in manual review</strong> and <strong>25% increased accuracy</strong>.</li>
+                        <li><strong>Deep Learning for Diagnostics:</strong> Led ML development of Santovia Path AI, achieving <strong>40% faster inference</strong> using transformer-based diagnostic models. Trained ensemble Vision/Swin/DeiT models for histopathology classification.</li>
+                        <li><strong>MLOps & Deployment:</strong> Deployed a CNN-based lung cancer detection model via <strong>Flask REST APIs on AWS Cloud</strong>, enabling scalable clinical inference.</li>
+                        <li><strong>Data Governance:</strong> Designed and deployed a PHI de-identification and regex-based data-governance system, ensuring <strong>HIPAA compliance</strong> across 12,000+ reports.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ML Engineer Co-op (Institute for Experiential AI) -->
+            <div class="relative pl-8 md:pl-16 pb-12">
+                <div class="absolute w-2 h-full bg-cyan-200 left-3 md:left-6"></div>
+                <div class="absolute w-6 h-6 bg-cyan-600 rounded-full left-0 md:left-3 top-0 flex items-center justify-center text-white">
+                    <i data-lucide="cpu" class="w-4 h-4"></i>
+                </div>
+                <div class="pl-4">
+                    <h3 class="text-2xl font-semibold text-[#0b1a32]">Machine Learning Engineer Co-op</h3>
+                    <p class="text-lg font-medium text-gray-700">The Institute for Experiential AI, Northeastern University</p>
+                    <p class="text-sm text-gray-500 mt-1 mb-4">Jan 2025 – Jul 2025 | Boston, MA</p>
+                    <ul class="list-disc space-y-3 pl-5 text-gray-600">
+                        <li><strong>Model Innovation:</strong> Designed <strong>Spliceformer</strong> (transformer framework) for genomic splicing and developed a custom BERT-based model for long-sequence understanding.</li>
+                        <li><strong>Optimization:</strong> Improved Top-K accuracy by <strong>15%</strong> through advanced positional embedding strategies (ROPE, Gamma) and reduced runtime by <strong>40%</strong>.</li>
+                        <li><strong>Architecture:</strong> Built hybrid CNN-BERT models, achieving 47.6% reconstruction accuracy on 4k-token sequences.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Data Engineer (Pravanzaa) - Only included if Data Engineering resume is prominent -->
+            <div class="relative pl-8 md:pl-16">
+                <div class="absolute w-6 h-6 bg-blue-600 rounded-full left-0 md:left-3 top-0 flex items-center justify-center text-white">
+                    <i data-lucide="plug" class="w-4 h-4"></i>
+                </div>
+                <div class="pl-4">
+                    <h3 class="text-2xl font-semibold text-[#0b1a32]">Data Engineer</h3>
+                    <p class="text-lg font-medium text-gray-700">Pravanzaa, Mumbai, India</p>
+                    <p class="text-sm text-gray-500 mt-1 mb-4">Aug 2021 – Dec 2022</p>
+                    <ul class="list-disc space-y-3 pl-5 text-gray-600">
+                        <li>Developed and optimized ETL pipelines with <strong>AWS Glue, PySpark, and Snowflake</strong>, reducing processing time by <strong>25%</strong>.</li>
+                        <li>Deployed <strong>Hadoop clusters</strong> for distributed data processing, improving data handling efficiency by <strong>30%</strong>.</li>
+                        <li>Constructed automated <strong>Power BI dashboards</strong> with DAX queries, increasing data-driven decisions by <strong>15%</strong>.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="section-heading text-3xl font-bold mb-8">Selected Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- NEW PROJECT 1: Rebalance AI: Intelligent Portfolio Management Assistant (Finance/GenAI) -->
+                <div class="project-card bg-white p-6 rounded-xl border-t-4 border-violet-500">
+                    <div class="flex items-center space-x-2 mb-2 text-violet-600">
+                        <i data-lucide="trending-up" class="w-5 h-5"></i>
+                        <span class="font-medium text-sm uppercase">GenAI & FinTech</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0b1a32] mb-3">Rebalance AI: Intelligent Portfolio Management Assistant</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Developed an AI-driven portfolio assistant using LangChain and OpenAI APIs to analyze market data, generate insights, and recommend optimal rebalancing strategies. Integrated vector retrieval (FAISS) and external APIs for real-time contextual analysis.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip" style="background-color: #ede7f6; color: #5e35b1;">LangChain/APIs</span>
+                        <span class="skill-chip" style="background-color: #ede7f6; color: #5e35b1;">OpenAI API</span>
+                        <span class="skill-chip" style="background-color: #ede7f6; color: #5e35b1;">FAISS</span>
+                        <span class="skill-chip" style="background-color: #ede7f6; color: #5e35b1;">Streamlit</span>
+                    </div>
+                </div>
+
+                <!-- Project 2: Enterprise-Grade LLM Personalization -->
+                <div class="project-card bg-white p-6 rounded-xl">
+                    <div class="flex items-center space-x-2 mb-2 text-teal-600">
+                        <i data-lucide="user-cog" class="w-5 h-5"></i>
+                        <span class="font-medium text-sm uppercase">Generative AI</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0b1a32] mb-3">Enterprise-Grade LLM Personalization via Generative Retrieval</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Developed an agentic RAG framework using user-specific knowledge graphs to personalize text generation, integrating reasoning and LSH for efficient retrieval.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip">RAG</span>
+                        <span class="skill-chip">LLMs</span>
+                        <span class="skill-chip">Knowledge Graphs</span>
+                        <span class="skill-chip">MinHash/LSH</span>
+                    </div>
+                </div>
+
+                <!-- Project 3: Therapy Matcher (LLM-Powered Oncology Decision Support) -->
+                <div class="project-card bg-white p-6 rounded-xl">
+                    <div class="flex items-center space-x-2 mb-2 text-pink-600">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                        <span class="font-medium text-sm uppercase">Healthcare AI</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0b1a32] mb-3">Therapy Matcher (Oncology Decision Support)</h3>
+                    <p class="text-gray-600 mb-4 text-sm">A clinical decision-support MVP for NSCLC that ranks therapies from patient biomarker JSON inputs, achieving <strong>85% guideline-consistent</strong> recommendations.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip" style="background-color: #fce4ec; color: #ad1457;">Python/Streamlit</span>
+                        <span class="skill-chip" style="background-color: #fce4ec; color: #ad1457;">RAG</span>
+                        <span class="skill-chip" style="background-color: #fce4ec; color: #ad1457;">JSON/Biomarkers</span>
+                    </div>
+                </div>
+
+                <!-- Project 4: Bankruptcy Prediction System -->
+                <div class="project-card bg-white p-6 rounded-xl">
+                    <div class="flex items-center space-x-2 mb-2 text-indigo-600">
+                        <i data-lucide="landmark" class="w-5 h-5"></i>
+                        <span class="font-medium text-sm uppercase">Finance ML</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0b1a32] mb-3">Bankruptcy Prediction System for U.S. Companies</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Built supervised ML models on 78,000+ firm records. Achieved <strong>93.6% accuracy</strong> and improved minority-class recall by <strong>15%</strong> using SMOTE and XGBoost.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip" style="background-color: #e8eaf6; color: #3f51b5;">XGBoost</span>
+                        <span class="skill-chip" style="background-color: #e8eaf6; color: #3f51b5;">Random Forest</span>
+                        <span class="skill-chip" style="background-color: #e8eaf6; color: #3f51b5;">SMOTE</span>
+                    </div>
+                </div>
+
+                <!-- Project 5: ClimaSmart: Multi-Modal Weather Prediction -->
+                <div class="project-card bg-white p-6 rounded-xl">
+                    <div class="flex items-center space-x-2 mb-2 text-amber-600">
+                        <i data-lucide="cloud-sun" class="w-5 h-5"></i>
+                        <span class="font-medium text-sm uppercase">MLOps & Data Eng</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0b1a32] mb-3">ClimaSmart: Multi-Modal Weather Prediction</h3>
+                    <p class="text-gray-600 mb-4 text-sm">An end-to-end automated weather forecasting pipeline combining CNN, LSTM, and XGBoost. Containerized with Docker/Kubernetes and deployed via GCP CI/CD (<strong>92% accuracy</strong>).</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip" style="background-color: #fff8e1; color: #ff8f00;">Airflow</span>
+                        <span class="skill-chip" style="background-color: #fff8e1; color: #ff8f00;">Docker/K8s</span>
+                        <span class="skill-chip" style="background-color: #fff8e1; color: #ff8f00;">CNN/LSTM</span>
+                    </div>
+                </div>
+                
+                <!-- Project 6: RASA: Voice-Enabled Period Tracker -->
+                <div class="project-card bg-white p-6 rounded-xl">
+                    <div class="flex items-center space-x-2 mb-2 text-green-600">
+                        <i data-lucide="mic" class="w-5 h-5"></i>
+                        <span class="font-medium text-sm uppercase">NLP & Health</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-[#0b1a32] mb-3">RASA: Voice-Enabled Period Tracker with RAG</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Built a voice-to-data RAG pipeline using speech-to-text and vector search for custom retrieval, enabling longitudinal health tracking and query-based insights.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-chip" style="background-color: #e8f5e9; color: #388e3c;">NLP</span>
+                        <span class="skill-chip" style="background-color: #e8f5e9; color: #388e3c;">Vector Search</span>
+                        <span class="skill-chip" style="background-color: #e8f5e9; color: #388e3c;">RAG</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="mt-10 text-center">
+                <a href="https://github.com/Muskanmelon-dotcom" target="_blank" class="inline-flex items-center space-x-2 bg-[#0d9488] text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-teal-700 transition duration-300 shadow-md">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                    <span>See All Code on GitHub</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Certifications & Education Section -->
+        <section id="certifications" class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-100 rounded-xl shadow-inner">
+            <h2 class="section-heading text-3xl font-bold mb-8">Education & Publications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Education -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-[#0b1a32] mb-4 border-b pb-2 flex items-center space-x-2">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-teal-600"></i>
+                        <span>Education</span>
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white rounded-lg shadow-md">
+                            <p class="font-bold text-lg text-gray-800">Master of Science in Data Analytics Engineering</p>
+                            <p class="text-gray-600">Northeastern University, Boston, MA</p>
+                            <p class="text-sm text-gray-500">Expected Graduation: Dec 2025</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg shadow-md">
+                            <p class="font-bold text-lg text-gray-800">Bachelor of Technology in Electronics and Telecommunications Engineering</p>
+                            <p class="text-gray-600">Mumbai University, India</p>
+                            <p class="text-sm text-gray-500">Graduated: Jul 2023</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications & Publications -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-[#0b1a32] mb-4 border-b pb-2 flex items-center space-x-2">
+                        <i data-lucide="award" class="w-6 h-6 text-teal-600"></i>
+                        <span>Certifications & Research</span>
+                    </h3>
+                    <ul class="space-y-3 text-gray-700">
+                         <!-- Updated Publications -->
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="file-text" class="w-5 h-5 text-indigo-600 flex-shrink-0 mt-1"></i>
+                            <span>Peer-Reviewed Paper: Digital Pathology and Ensemble Deep Learning for Kidney Cancer Diagnosis</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="file-up" class="w-5 h-5 text-amber-600 flex-shrink-0 mt-1"></i>
+                            <span>Paper in Review (Intelligence-Based Medicine): CNN-Ensembled Model for Lung Cancer Detection</span>
+                        </li>
+                        <!-- Existing Certs -->
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-1"></i>
+                            <span>Google Data Analytics Professional Certificate</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-1"></i>
+                            <span>Azure AI-900 Certification</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-green-600 flex-shrink-0 mt-1"></i>
+                            <span>Python for Data Science Certificate</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8">
+            <h2 class="section-heading text-3xl font-bold text-center mb-10">Get In Touch</h2>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-4 border-[#0d9488]">
+                <p class="text-lg text-gray-600 text-center mb-6">
+                    I'm actively seeking roles in Machine Learning Engineering, Generative AI Development, or Advanced Data Science. Feel free to connect!
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    
+                    <!-- Email -->
+                    <div class="flex flex-col items-center">
+                        <i data-lucide="mail" class="w-8 h-8 text-teal-600 mb-2"></i>
+                        <span class="font-medium text-gray-800">Email</span>
+                        <a href="mailto:jain.musk@northeastern.edu" class="text-blue-500 hover:text-blue-700 transition duration-150 break-words">jain.musk@northeastern.edu</a>
+                    </div>
+                    
+                    <!-- Phone -->
+                    <div class="flex flex-col items-center">
+                        <i data-lucide="phone" class="w-8 h-8 text-teal-600 mb-2"></i>
+                        <span class="font-medium text-gray-800">Phone</span>
+                        <a href="tel:+18572646541" class="text-gray-600 hover:text-gray-800 transition duration-150">(857) 264-6541</a>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="flex flex-col items-center">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-teal-600 mb-2"></i>
+                        <span class="font-medium text-gray-800">Location</span>
+                        <span class="text-gray-600">Boston, MA</span>
+                    </div>
+
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-200 flex justify-center space-x-6">
+                    <a href="https://github.com/Muskanmelon-dotcom" target="_blank" class="text-gray-700 hover:text-[#0b1a32] transition duration-150" aria-label="GitHub Profile">
+                        <i data-lucide="github" class="w-8 h-8"></i>
+                    </a>
+                    <!-- Updated LinkedIn Link -->
+                    <a href="https://www.linkedin.com/in/muskan-jain-25354a1b2/" target="_blank" class="text-blue-600 hover:text-blue-800 transition duration-150" aria-label="LinkedIn Profile">
+                        <i data-lucide="linkedin" class="w-8 h-8"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b1a32] text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+            <p>&copy; 2025 Muskan Naresh Jain Portfolio. Built with Tailwind CSS and Data from Provided Resumes.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu and Icon rendering -->
+    <script>
+        // Render lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('mobile-menu-button');
+            const menu = document.getElementById('mobile-menu');
+            const navLinks = menu.querySelectorAll('a');
+
+            if (button && menu) {
+                button.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    // Change icon to close (X) when open, and menu when closed
+                    const icon = button.querySelector('i');
+                    if (menu.classList.contains('hidden')) {
+                        icon.setAttribute('data-lucide', 'menu');
+                    } else {
+                        icon.setAttribute('data-lucide', 'x');
+                    }
+                    lucide.createIcons();
+                });
+
+                // Close menu when a link is clicked (for better mobile UX)
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                        button.querySelector('i').setAttribute('data-lucide', 'menu');
+                        lucide.createIcons();
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
